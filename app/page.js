@@ -3,6 +3,7 @@ import NoticeBoard from './Components/NoticeBoard'
 import InfoCard from './Components/InfoCard'
 import PrincipalCard from './Components/PrincipalCard'
 import AdminPanel from './Components/AdminPanel';
+import Map from './Components/Map';
 
 export default function Page() {
   return (
@@ -44,7 +45,9 @@ export default function Page() {
       <AdminPanel></AdminPanel>
 
       {/* Map */}
-      <div className="bg-gray-300 w-full h-48">Map goes here</div>
+      <div className="bg-gray-300 w-full ">
+        <Map></Map>
+      </div>
 
       {/* Important Links Card */}
       <div className="bg-white shadow p-4">

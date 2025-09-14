@@ -10,7 +10,7 @@ export default function AdminPanel() {
       <FaUserCircle className="text-green-700" size={30}/>
 
       {/* Login Button */}
-      <a href="/login" className="text-black text-xs mb-3 hover:text-blue-950">
+      <a href="/login" className="text-blue-950 text-xs mb-3 hover:text-blue-950">
         লগইন
       </a>
     </div>
