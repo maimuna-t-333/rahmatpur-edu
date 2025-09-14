@@ -8,19 +8,14 @@ export default function Page() {
     {/* Left/Main Section */}
     <div className="flex-1 space-y-6">
       
-      <div className="w-250 h-64 ">
+      <div className="w-250 h-64 mb-36 ">
         <Carousel/>
       </div>
 
-      {/* Headline + Button */}
-      <div className="flex justify-between items-center bg-white p-4 shadow">
-        <h2 className="text-xl font-bold">Headline Here</h2>
-        <button className="btn btn-primary">Click Me</button>
-      </div>
-
       {/* Marquee */}
-      <div className="bg-white p-2 shadow">
-        <marquee>Latest News / Updates scrolling here...</marquee>
+      <div className="flex bg-white p-2 shadow">
+        <button className="btn bg-green-600 border-none rounded-none  ml-3">শিরোনাম:</button>
+        <marquee className="text-blue-950 ml-3 mt-2">২০২৫ সালের ১০ম শ্রেণির শিক্ষার্থীদের প্রাক-নির্বাচনী পরীক্ষা আগামী ০১/০৯/২০২৫ইং তারিখ হইতে আরম্ভ হইবে।</marquee>
       </div>
 
       {/* Notice Board */}
