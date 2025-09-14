@@ -1,4 +1,5 @@
 import Carousel from './Components/Carousel'
+import NoticeBoard from './Components/NoticeBoard'
 
 export default function Page() {
   return (
@@ -20,12 +21,7 @@ export default function Page() {
 
       {/* Notice Board */}
       <div className="bg-white p-4 shadow">
-        <h3 className="font-semibold mb-2">Notice Board</h3>
-        <ul className="list-disc list-inside">
-          <li>Notice 1</li>
-          <li>Notice 2</li>
-          <li>Notice 3</li>
-        </ul>
+      <NoticeBoard/>
       </div>
 
       {/* 6 Cards */}
