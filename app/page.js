@@ -1,6 +1,8 @@
 import Carousel from './Components/Carousel'
 import NoticeBoard from './Components/NoticeBoard'
 import InfoCard from './Components/InfoCard'
+import PrincipalCard from './Components/PrincipalCard'
+import AdminPanel from './Components/AdminPanel';
 
 export default function Page() {
   return (
@@ -34,13 +36,12 @@ export default function Page() {
     {/* Right/Side Section */}
     <div className="w-full lg:w-80 flex flex-col gap-6">
       {/* Card with image + details */}
-      <div className="bg-white shadow p-4">
-        <img src="/sample.jpg" alt="Sample" className="w-full h-32 object-cover mb-2"/>
-        <p>Short details about the card content.</p>
+      <div >
+        <PrincipalCard/>
       </div>
 
       {/* Login Button */}
-      <button className="btn btn-primary w-full">Login</button>
+      <AdminPanel></AdminPanel>
 
       {/* Map */}
       <div className="bg-gray-300 w-full h-48">Map goes here</div>
