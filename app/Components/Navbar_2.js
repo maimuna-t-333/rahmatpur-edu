@@ -2,8 +2,8 @@ import { FaHome } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow p-4">
-      <div className="flex flex-wrap justify-center gap-14">
+    <nav className="bg-white shadow p-4 mx-21">
+      <div className="flex flex-wrap justify-center gap-10">
 
         {/* Home */}
         <div className="dropdown dropdown-hover">

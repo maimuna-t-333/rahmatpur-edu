@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-green-600 text-primary-content p-4">
+    <nav className="bg-green-600 text-primary-content p-4 mx-21">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 mx-8">
         
         {/* Logo + School Name */}

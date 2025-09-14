@@ -46,7 +46,7 @@ export default function NoticeBoard() {
         {/* Bottom Button */}
         <div className="mt-4 text-center md:text-left">
           <Link href="/notice">
-            <button className="btn lg:ml-100 bg-green-600 text-white rounded-none border-none hover:bg-green-700">
+            <button className="btn lg:ml-100 rounded-xl bg-green-600 text-white  border-none hover:bg-green-700">
               সকল নোটিশ
             </button>
           </Link>

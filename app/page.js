@@ -4,10 +4,11 @@ import InfoCard from './Components/InfoCard'
 import PrincipalCard from './Components/PrincipalCard'
 import AdminPanel from './Components/AdminPanel';
 import Map from './Components/Map';
+import ImportantLinks from './Components/ImportantLinks';
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gray-100 p-4">
+    <main className="min-h-screen  p-4">
   <div className="container mx-auto flex flex-col lg:flex-row gap-6">
     
     {/* Left/Main Section */}
@@ -51,12 +52,7 @@ export default function Page() {
 
       {/* Important Links Card */}
       <div className="bg-white shadow p-4">
-        <h4 className="font-semibold mb-2">Important Links</h4>
-        <ul className="list-disc list-inside">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
+      <ImportantLinks></ImportantLinks>
       </div>
     </div>
 
