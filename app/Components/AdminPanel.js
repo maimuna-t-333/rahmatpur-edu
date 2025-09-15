@@ -4,7 +4,7 @@ export default function AdminPanel() {
   return (
     <div className="bg-white shadow flex flex-col items-center gap-4">
       {/* Heading */}
-      <h3 className="text-white bg-green-700 px-21 font-bold text-xs py-3 ">এডমিন প্যানেল</h3>
+      <h3 className="text-white bg-green-700 px-36  lg:px-21 font-bold text-xs py-3 ">এডমিন প্যানেল</h3>
 
       {/* User Image */}
       <FaUserCircle className="text-green-700" size={30}/>

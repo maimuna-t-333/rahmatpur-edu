@@ -1,134 +1,78 @@
-import { FaHome } from "react-icons/fa";
 
-export default function Navbar() {
+"use client";
+import { FaHome, FaBars } from "react-icons/fa";
+import { useState } from "react";
+import Link from "next/link";
+
+export default function Navbar_2() {
+  const [open, setOpen] = useState(false);
+
+  const links = [
+    { name: "প্রতিষ্ঠান পরিচিতি", href: "/about" },
+    { name: "শিক্ষার্থীর তথ‌্য", href: "/students" },
+    { name: "পাঠদানসংক্রান্ত তথ্য", href: "/academic" },
+    { name: "নোটিশ", href: "/notices" },
+    { name: "ফলাফল", href: "/results" },
+    { name: "কমিটি", href: "/committee" },
+    { name: "অন্যান্য", href: "/others" },
+    { name: "গ‌্যালারী", href: "/gallery" },
+    { name: "যোগাযোগ", href: "/contact" },
+    { name: "লগইন", href: "/login" },
+  ];
+
   return (
-    <nav className="bg-white shadow p-4 mx-21">
-      <div className="flex flex-wrap justify-center gap-10">
+    <nav className="bg-white shadow lg:p-4 lg:mx-21">
+      {/* Mobile Navbar */}
+      <div className="flex justify-between px-3  items-center md:hidden">
+        {/* Home Icon */}
+        <Link href="/" className="text-black flex items-center gap-1">
+          <FaHome size={20} />
+        </Link>
 
+        {/* Menu Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-black p-2 hover:bg-green-700 hover:text-white rounded"
+        >
+          <FaBars size={20} />
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {open && (
+        <div className="flex flex-col gap-2 mt-2  md:hidden">
+          {links.map((link, idx) => (
+            <Link
+              key={idx}
+              href={link.href}
+              className="p-2 hover:bg-green-700 hover:text-white rounded"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {/* Desktop Navbar */}
+      <div className="hidden md:flex flex-wrap justify-center gap-8">
         {/* Home */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer flex items-center gap-1 text-black">
-            <FaHome /> হোম
-          </label>
-          <ul
-            tabIndex={0}
-            className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52"
+        <Link
+          href="/"
+          className="cursor-pointer flex p-1 items-center gap-1 text-black hover:bg-green-700 hover:text-white"
+        >
+          <FaHome /> হোম
+        </Link>
+
+        {/* Other Links */}
+        {links.map((link, idx) => (
+          <Link
+            key={idx}
+            href={link.href}
+            className="cursor-pointer p-1 text-black hover:bg-green-700 hover:text-white"
           >
-            <li><a>Sub Item 1</a></li>
-            <li><a>Sub Item 2</a></li>
-          </ul>
-        </div>
-
-        {/* প্রতিষ্ঠান পরিচিতি */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            প্রতিষ্ঠান পরিচিতি
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>ইতিহাস</a></li>
-            <li><a>শিক্ষকবৃন্দ</a></li>
-          </ul>
-        </div>
-
-        {/* শিক্ষার্থীর তথ‌্য */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            শিক্ষার্থীর তথ‌্য
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>রেজিস্ট্রেশন</a></li>
-            <li><a>প্রবেশপত্র</a></li>
-          </ul>
-        </div>
-
-        {/* পাঠদানসংক্রান্ত তথ্য */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            পাঠদানসংক্রান্ত তথ্য
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>সিলেবাস</a></li>
-            <li><a>রুটিন</a></li>
-          </ul>
-        </div>
-
-        {/* নোটিশ */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            নোটিশ
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>সাম্প্রতিক নোটিশ</a></li>
-            <li><a>পুরাতন নোটিশ</a></li>
-          </ul>
-        </div>
-
-        {/* ফলাফল */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            ফলাফল
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>বার্ষিক</a></li>
-            <li><a>মধ্যবর্তী</a></li>
-          </ul>
-        </div>
-
-        {/* কমিটি */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            কমিটি
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>ম্যানেজিং কমিটি</a></li>
-            <li><a>অভিভাবক প্রতিনিধি</a></li>
-          </ul>
-        </div>
-
-        {/* অন্যান্য */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            অন্যান্য
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>ডাউনলোড</a></li>
-            <li><a>সার্টিফিকেট</a></li>
-          </ul>
-        </div>
-
-        {/* গ‌্যালারী */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            গ‌্যালারী
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>ছবি</a></li>
-            <li><a>ভিডিও</a></li>
-          </ul>
-        </div>
-
-        {/* যোগাযোগ */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            যোগাযোগ
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>ঠিকানা</a></li>
-            <li><a>ফোন</a></li>
-          </ul>
-        </div>
-
-        {/* লগইন */}
-        <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="cursor-pointer text-black">
-            লগইন
-          </label>
-          <ul className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52">
-            <li><a>অ্যাডমিন</a></li>
-            <li><a>শিক্ষার্থী</a></li>
-          </ul>
-        </div>
-
+            {link.name}
+          </Link>
+        ))}
       </div>
     </nav>
   );

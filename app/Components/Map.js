@@ -10,7 +10,7 @@ const LeafletMap = dynamic(() => import("./RealMap"), {
 export default function Map() {
   return (
     <div className=" rounded">
-      <h3 className="text-white bg-green-700 font-bold text-sm pl-26 py-3">ম্যাপ</h3>
+      <h3 className="text-white bg-green-700 font-bold text-sm pl-30  lg:pl-26 py-3">ম্যাপ</h3>
       <div className="h-80 w-full">
         <LeafletMap />
       </div>

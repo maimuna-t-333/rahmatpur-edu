@@ -41,7 +41,7 @@ export default function InfoCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 w-250 mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 sm:w-96 lg:w-250 mx-auto">
       {cards.map((card, index) => (
         <div
           key={index}

@@ -14,12 +14,12 @@ export default function ImportantLinks() {
   return (
     <div className="bg-white  rounded">
       {/* Heading */}
-      <h3 className="text-green-700 font-bold text-sm mb-3">
+      <h3 className="bg-green-700 text-white px-4 py-2 pl-30 lg:pl-16  font-bold text-sm mb-3">
         গুরত্বপুর্ণ লিংকসমুহ
       </h3>
 
       {/* Links list */}
-      <ul className="space-y-1 text-blue-950">
+      <ul className="space-y-1 text-blue-950 px-4">
         {links.map((link, idx) => (
           <li key={idx}>
             <a

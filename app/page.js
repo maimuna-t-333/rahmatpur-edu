@@ -14,7 +14,7 @@ export default function Page() {
     {/* Left/Main Section */}
     <div className="flex-1 space-y-6">
       
-      <div className="w-250 h-64 mb-36 ">
+      <div className="w-250 h-64 lg:mb-36 ">
         <Carousel/>
       </div>
 
@@ -36,7 +36,7 @@ export default function Page() {
     </div>
 
     {/* Right/Side Section */}
-    <div className="w-full lg:w-80 flex flex-col gap-6">
+    <div className="w-full border  flex flex-col gap-6">
       {/* Card with image + details */}
       <div >
         <PrincipalCard/>
@@ -51,7 +51,7 @@ export default function Page() {
       </div>
 
       {/* Important Links Card */}
-      <div className="bg-white shadow p-4">
+      <div className="bg-white shadow ">
       <ImportantLinks></ImportantLinks>
       </div>
     </div>

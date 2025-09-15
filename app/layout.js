@@ -5,9 +5,9 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
-        className="bg-white"
+        className="bg-white text-black"
       >
         <Navbar_1/>
         <Navbar_2/>
