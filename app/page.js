@@ -36,7 +36,7 @@ export default function Page() {
     </div>
 
     {/* Right/Side Section */}
-    <div className="w-full border  flex flex-col gap-6">
+    <div className="w-full  flex flex-col gap-6">
       {/* Card with image + details */}
       <div >
         <PrincipalCard/>
