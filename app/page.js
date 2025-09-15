@@ -20,7 +20,7 @@ export default function Page() {
 
       {/* Marquee */}
       <div className="flex bg-white p-2 shadow">
-        <button className="btn bg-green-600 border-none rounded-none  ml-3">শিরোনাম:</button>
+        <button className="btn bg-green-700 text-white border-none rounded-none  ml-3">শিরোনাম:</button>
         <marquee className="text-blue-950 ml-3 mt-2">২০২৫ সালের ১০ম শ্রেণির শিক্ষার্থীদের প্রাক-নির্বাচনী পরীক্ষা আগামী ০১/০৯/২০২৫ইং তারিখ হইতে আরম্ভ হইবে।</marquee>
       </div>
 
